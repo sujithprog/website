@@ -430,3 +430,46 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* Skills Section */
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 8px;
+  background-color: #4CAF50; /* Adjust this color to match your design */
+  color: white;
+  line-height: 20px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.title {
+  margin: 2rem 0;
+  text-align: center;
+}
