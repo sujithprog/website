@@ -179,7 +179,7 @@ section {
   width: 400px;
   margin: auto 0;
   overflow: hidden; /* Ensures the sliding image doesn't show outside this box */
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .section__pic-container img {
@@ -484,3 +484,56 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+                                                                                     /* Skills Section */
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.progress {
+  position: relative; /* Allows absolute positioning within this container */
+  height: 20px;
+  border-radius: 8px;
+  background-color: #4caf4e;
+  color:rgb(255, 255, 255);
+  display: flex;
+  align-items: center; /* Centers the content vertically */
+  justify-content: flex-end; /* Aligns the content to the right */
+  padding-right: 10px; /* Ensures padding inside the progress bar for the text */
+}
+
+
+.title {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+.progress span {
+  position: absolute; /* Absolute positioning to place the text precisely */
+  right: 5px; /* Adjust based on preference */
+  font-size: 0.75rem; /* Smaller font size for the percentage text */
+}
+
