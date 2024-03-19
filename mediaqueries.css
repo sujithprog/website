@@ -47,8 +47,11 @@
     }
   }
   
-  @media screen and (max-width: 600px) {
-    #contact,
+  @media screen and (max-width: 768px) {
+    #contact {
+      padding: 20px;
+      margin-top: 20px;
+    }
     footer {
       height: 40vh;
     }
@@ -69,8 +72,10 @@
       flex-wrap: wrap;
     }
     .contact-info-container {
-      margin: 0;
+      padding: 10px; /* Reduced padding on smaller screens for better space management */
+      gap: 0.25rem; /* Smaller gap for tighter layout */
     }
+    
     .contact-info-container p,
     .nav-links li a {
       font-size: 1rem;
@@ -100,4 +105,11 @@
     .text-container {
       text-align: justify;
     }
+    .contact-info-upper-container {
+      padding: 20px; /* Adjusted for smaller screens */
+      margin-top: 20px;
+    }
+
   }
+
+ 

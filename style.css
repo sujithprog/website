@@ -66,7 +66,7 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+                                                                                     /* HAMBURGER MENU */
 
 #hamburger-nav {
   display: none;
@@ -150,16 +150,17 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: 96vh; /* Changed from height to min-height */
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  position: relative;
+  margin-bottom: 2rem;
 }
+                                                                          
 
 .section-container {
   display: flex;
 }
-
 /* PROFILE SECTION */
 
 #profile {
@@ -167,13 +168,37 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  overflow: hidden; /* Ensures nothing spills outside this container */
 }
 
 .section__pic-container {
   display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
   height: 400px;
   width: 400px;
   margin: auto 0;
+  overflow: hidden; /* Ensures the sliding image doesn't show outside this box */
+  border-radius: 30px;
+}
+
+.section__pic-container img {
+  width: 100%; /* Adjust the image size to fit the container */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0; /* Start fully transparent */
+  transform: translateX(-100%); /* Start from the left */
+  animation: slideInFromLeft 2.5s ease-out forwards; /* Animation for the slide-in effect */
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .section__text {
@@ -185,7 +210,7 @@ section {
   font-weight: 600;
 }
 
-.section__text__p1 {
+.section__text__p1, .section__text__p2 {
   text-align: center;
 }
 
@@ -206,14 +231,15 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
+
+                                                                                    /* ICONS */
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
+                                                                                   /* BUTTONS */
 
 .btn-container {
   display: flex;
@@ -261,7 +287,7 @@ section {
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
+                                                                             /* ABOUT SECTION */
 
 #about {
   position: relative;
@@ -314,7 +340,7 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+                                                                                 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
@@ -353,7 +379,7 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
+                                                                                /* PROJECTS SECTION */
 
 #projects {
   position: relative;
@@ -379,6 +405,33 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+.details-container.color-container {
+  /* Initial styles for smooth transition effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+.details-container.color-container:hover {
+  /* Transform and shadow for a "lift-off" effect */
+  transform: translateY(-5px); /* Moves the container up a bit */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+
+  /* Subtle background color change for additional visual feedback */
+  background-color: #f0f0f0; /* Adjust this color to match your design's color scheme */
+}
+
+.details-container.color-container .project-title, .details-container.color-container .project-btn {
+  transition: color 0.3s ease; /* Smooth transition for text color changes */
+}
+
+.details-container.color-container:hover .project-title {
+  color: #007bff; /* Highlight color for the project title on hover */
+}
+
+.details-container.color-container:hover .project-btn {
+  color: #0056b3; /* Adjust button text color on hover for better visibility */
+}
+
 
 /* CONTACT */
 
@@ -386,8 +439,9 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh; /* Changed from height to min-height */
 }
+
 
 .contact-info-upper-container {
   display: flex;
@@ -420,7 +474,7 @@ article .icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
+                                                                                     /* FOOTER SECTION */
 
 footer {
   height: 26vh;
@@ -430,3 +484,56 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+                                                                                     /* Skills Section */
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.progress {
+  position: relative; /* Allows absolute positioning within this container */
+  height: 20px;
+  border-radius: 8px;
+  background-color: #4caf4e;
+  color:rgb(255, 255, 255);
+  display: flex;
+  align-items: center; /* Centers the content vertically */
+  justify-content: flex-end; /* Aligns the content to the right */
+  padding-right: 10px; /* Ensures padding inside the progress bar for the text */
+}
+
+
+.title {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+.progress span {
+  position: absolute; /* Absolute positioning to place the text precisely */
+  right: 5px; /* Adjust based on preference */
+  font-size: 0.75rem; /* Smaller font size for the percentage text */
+}
+
