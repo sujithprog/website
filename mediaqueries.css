@@ -112,4 +112,13 @@
 
   }
 
- 
+  @media (max-width: 600px) {
+    .contact-info-upper-container {
+      flex-direction: column; /* Adjusts layout for smaller screens */
+      padding: 1rem;
+    }
+  
+    .contact-info-container {
+      gap: 1rem; /* Increases gap for clarity on smaller screens */
+    }
+  }

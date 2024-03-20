@@ -340,7 +340,8 @@ section {
   margin: auto 0;
 }
 
-                                                                                 /* EXPERIENCE SECTION */
+
+/* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
@@ -379,7 +380,7 @@ article .icon {
   cursor: default;
 }
 
-                                                                                /* PROJECTS SECTION */
+/* PROJECTS SECTION */
 
 #projects {
   position: relative;
@@ -440,6 +441,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   min-height: 70vh; /* Changed from height to min-height */
+  width: auto;
 }
 
 
@@ -452,6 +454,7 @@ article .icon {
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  width: auto;
 }
 
 .contact-info-container {
@@ -460,10 +463,11 @@ article .icon {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  width: auto;
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: medium;
 }
 
 .contact-icon {
@@ -506,10 +510,13 @@ footer p {
   margin-bottom: .5rem;
 }
 
+
+
+
+
 .progress-bar {
-  width: 100%;
-  background-color: white;
-  border-radius: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
 }
 
 .progress {
